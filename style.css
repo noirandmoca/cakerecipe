@@ -3,15 +3,18 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;/*余白の影響を防ぐ*/
 }
 
 .haikei {
   background-color: #f7f3e8;
+  margin: 0;
+  padding: 0;
 }
 
 .main {
 background-color: #fff;
-margin: 50% auto;
+margin: 0 auto;
 padding: 50px;
 width: 70%;
 text-align: center;
@@ -33,12 +36,23 @@ h1 {
 }
 
 .zairyou {
-  margin-top: 0;
-  margin: 50% auto;
+  table-layout: fixed; /*列幅を均等にする*/
+  margin-top: 20px;
+  margin-bottom: 10px;
   width: 70%;
   border: 0.5px solid #e8e8e8;
-  border-spacing: 0;
-  text-align: left;
+  border-collapse: collapse;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.zairyou th,
+.zairyou td {
+  width: 50%;
+  border: 1px solid #e8e8e8;
+  padding: 10px;
+  word-wrap: break-word;
 }
 
 .zairyou-title {
@@ -55,17 +69,23 @@ th {
 }
 
 td {
-  order: 0.5px solid #e8e8e8;
+  border: 0.5px solid #e8e8e8;
   padding: 10px;
+  text-align: left;
 }
 
 h3 {
   color: #E0D7C1;
+  margin-bottom: 0;
 }
 
-.th koutei-banngo {
+.th koutei-number {
   width: 15%;
   color: #E0D7C1;
+}
+
+.koutei-number {
+  width: 15%;
 }
 
 .tukurikata {
